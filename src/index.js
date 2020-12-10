@@ -20,6 +20,9 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 
 // * Database
+const Article = require('../model/Articles');
+const Category = require('../model/Category');
+
 connection.authenticate()
     .then(() => {
         console.log('Conexão Realizada com Sucesso!');
